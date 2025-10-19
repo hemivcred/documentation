@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VCRED: Debt‑Backed USD Stablecoin on Hemi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            font-size: 11px;
+            line-height: 1.4;
+            color: #333;
+            background: white;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 15px;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1e40af;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #64748b;
+            font-style: italic;
+        }
+
+        .two-column {
+            display: flex;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .column {
+            flex: 1;
+        }
+
+        h2 {
+            font-size: 14px;
+            color: #1e40af;
+            margin: 15px 0 8px 0;
+            padding-bottom: 3px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        h3 {
+            font-size: 12px;
+            color: #374151;
+            margin: 12px 0 5px 0;
+            font-weight: bold;
+        }
+
+        p {
+            margin-bottom: 8px;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 15px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            margin-bottom: 3px;
+        }
+
+        .highlight-box {
+            background: #f8fafc;
+            border-left: 4px solid #2563eb;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 4px;
+        }
+
+        .formula {
+            background: #f1f5f9;
+            padding: 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 10px;
+            text-align: center;
+            margin: 8px 0;
+        }
+
+        .key-feature {
+            background: #ecfdf5;
+            border: 1px solid #10b981;
+            padding: 8px;
+            border-radius: 4px;
+            margin: 8px 0;
+        }
+
+        .footer {
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+            font-size: 9px;
+            color: #64748b;
+        }
+
+        @media print {
+            body {
+                font-size: 10px;
+                padding: 0.4in;
+            }
+            .title {
+                font-size: 22px;
+            }
+            .subtitle {
+                font-size: 13px;
+            }
+        }
+
+        strong {
+            color: #1e40af;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">VCRED Stablecoin</div>
+        <div class="subtitle">Debt‑Backed USD Peg on Hemi (chainID 43111)</div>
+    </div>
+
+    <div class="two-column">
+        <div class="column">
+            <h2>Protocol Overview</h2>
+            <p>VCRED is a <strong>USD‑pegged, debt‑backed stablecoin</strong> native to the Hemi L2 network. 
+            The VCRED treasury issues diversified DeFi debt, deploys proceeds into yield strategies, and
+            uses cash‑flow surpluses to defend the peg and grow reserves.</p>
+
+            <div class="key-feature">
+                <strong>Key Innovation:</strong> Treasury debt generation <em>automatically scales sell‑side liquidity</em>, ensuring that new VCRED supply is matched by market depth.
+            </div>
+
+            <h2>Peg Management</h2>
+            <h3>Target Band &amp; Triggers</h3>
+            <ul>
+                <li><strong>Soft peg:</strong> $1.00 ± 2 %</li>
+                <li><strong>Below $0.98:</strong> Treasury injects reserves to buy back VCRED</li>
+                <li><strong>Above $1.02:</strong> Treasury sells VCRED to cap appreciation</li>
+            </ul>
+
+            <h3>Operation Cadence</h3>
+            <p>Peg actions are <strong>executed manually each week</strong> by VCRED DAO multisig, allowing transparent review of reserves and market conditions.</p>
+
+            <h2>Treasury &amp; Debt Engine</h2>
+            <p>The DAO sources revenue through multiple debt instruments:</p>
+            <ul>
+                <li>Lending‑market notes (variable‑rate debt)</li>
+                <li>Bonding programs (discounted VCRED for liquidity)</li>
+                <li>Private structured deals with institutional partners</li>
+            </ul>
+
+            <div class="formula">
+                Net Yield = Σ (Debt&nbsp;Proceeds × Strategy&nbsp;APR) – Σ (Debt&nbsp;Cost)
+            </div>
+
+            <p>Surplus yield is recycled into peg defense and long‑term reserve growth.</p>
+
+            <h2>Economic Model</h2>
+            <p><strong>No redemption desk.</strong> Holders freely <em>swap</em> VCRED for USDC.e, ETH, or other tokens on SushiSwap; zero protocol fees.</p>
+            <p><strong>Soft supply cap.</strong> DAO mints additional VCRED only when market liquidity is thin.</p>
+        </div>
+
+        <div class="column">
+            <h2>User Lifecycle</h2>
+
+            <h3>Acquire</h3>
+            <p>Buy VCRED from the <strong>SushiSwap VCRED/USDC.e</strong> pool on Hemi.</p>
+
+            <h3>Utilize</h3>
+            <ul>
+                <li>Stable medium of exchange within Hemi DeFi</li>
+                <li>Collateral in money markets</li>
+                <li>Pair token for liquidity farming</li>
+            </ul>
+
+            <h3>Exit</h3>
+            <p>Swap VCRED back to other tokens anytime—no lockups, queues, or withdrawal limits.</p>
+
+            <div class="highlight-box">
+                <strong>Address:</strong> 0x71881974e96152643C74A8e0214B877CfB2A0Aa1
+            </div>
+
+            <h2>Governance &amp; Incentives</h2>
+            <ul>
+                <li><strong>VCRED DAO:</strong> Multisig controls treasury, peg ops, and supply</li>
+                <li><strong>Liquidity Mining:</strong> Weekly rewards boost AMM depth</li>
+                <li><strong>Community Grants:</strong> Funding for integrations and tooling</li>
+            </ul>
+
+            <h2>Roadmap (Next 6 Months)</h2>
+            <ul>
+                <li>Launch diversified debt‑market integrations</li>
+                <li>Release bonding module for treasury growth</li>
+                <li>Expand liquidity mining to additional DEXes</li>
+            </ul>
+
+            <h2>Risk &amp; Resilience</h2>
+            <ul>
+                <li><strong>Demand Risk:</strong> Low adoption slows revenue; mitigated with incentives and BD</li>
+                <li><strong>Market Risk:</strong> Treasury yield strategies diversify across L2 and L1</li>
+                <li><strong>Operational Risk:</strong> Weekly manual ops allow human oversight and rapid course correction</li>
+            </ul>
+
+            <div class="key-feature">
+                <strong>No Liquidations, No Redemption Runs:</strong> Floating supply adjusts via market swaps, minimizing systemic shocks during stress events.
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        VCRED Stablecoin • Decentralized Finance • Built on Hemi L2
+    </div>
+</body>
+</html>
